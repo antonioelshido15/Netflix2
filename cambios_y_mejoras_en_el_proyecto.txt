@@ -1,0 +1,51 @@
+========================================================================
+RESUMEN DE CAMBIOS Y MEJORAS - PROYECTO GLITCH
+========================================================================
+
+1. SEPARACIÓN Y ORGANIZACIÓN DEL CSS (profilesStyle.css)
+------------------------------------------------------------------------
+-  Se creó un archivo de hojas de estilo independiente llamado
+  'CSS/profilesStyle.css' exclusivo para el maquetado de los perfiles.
+- Beneficio: Permite usar Flexbox centrado en toda la pantalla sin
+  afectar el diseño del login/registro, manteniendo un código limpio y
+  escalable.
+
+2. INTEGRACIÓN DEL BOTÓN "CERRAR SESIÓN"
+------------------------------------------------------------------------
+- Se integró un enlace con la clase '.btn-glitch' en la esquina superior
+  derecha de la barra de navegación (<nav>).
+- Apunta a la ruta '<?= BASE_URL ?>Views/logout.php' para destruir la
+  sesión de forma segura cuando el usuario decida salir.
+
+3. OBTENCIÓN DINÁMICA DEL NOMBRE DE USUARIO
+------------------------------------------------------------------------
+- Problema: El nombre "Rubén" estaba fijo (hardcodeado) en el HTML.
+- Solución: Se agregó una consulta SQL directa a la base de datos:
+    SELECT id_cuenta, nombre FROM cuentas WHERE id_cuenta = ?
+- Ahora el sistema obtiene automáticamente el nombre con el que se registró
+  la cuenta activa ($_SESSION["id_cuenta"]).
+
+4. AVATAR E INICIAL AUTOMÁTICA
+------------------------------------------------------------------------
+- Se añadió lógica en PHP mediante las funciones 'mb_substr' y 'mb_strtoupper'
+  para extraer la primera letra del nombre registrado del usuario.
+- Ejemplo: Si el usuario se registra como "Carlos", el avatar generará
+  automáticamente la letra "C" centrada dentro del marco rosa neón.
+
+5. PROTECCIÓN DE RUTA
+------------------------------------------------------------------------
+- Se mantuvo y verificó el control de acceso en la parte superior:
+  if (!isset($_SESSION["id_cuenta"])) { ... }
+- Si alguien intenta entrar directamente a la vista de perfiles sin haber
+  iniciado sesión, el servidor lo redirigirá inmediatamente al login.
+
+6. Nota
+-------------------------------------------------------------------------
+-nota,se usa la base de datos que esta en el archivo ("schema.sql") 
+para una mejor funcion y evitar errores
+
+========================================================================
+Archivos involucrados:
+- CSS/profilesStyle.css (Nuevo archivo)
+- Views/profiles.php (Vista actualizada)
+========================================================================
