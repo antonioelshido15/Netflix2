@@ -1,6 +1,10 @@
+-- 1. Crear y usar la base de datos
 CREATE DATABASE IF NOT EXISTS streaming_db;
 USE streaming_db;
 
+-- ==========================================
+-- TABLAS INDEPENDIENTES
+-- ==========================================
 
 -- Planes Subscripcion
 CREATE TABLE PlanesSuscripcion (
@@ -10,7 +14,6 @@ CREATE TABLE PlanesSuscripcion (
     pantallas_simultaneas INT NOT NULL,
     resolucion_maxima VARCHAR(20) NOT NULL
 );
-
 
 -- Contenidos
 CREATE TABLE Contenidos (
@@ -22,20 +25,23 @@ CREATE TABLE Contenidos (
     anio_lanzamiento INT
 );
 
+-- ==========================================
+-- TABLAS DEPENDIENTES
+-- ==========================================
 
--- Cuentas del usuario
+-- Cuentas del usuario (Incluye control de acceso administrativo)
 CREATE TABLE Cuentas (
     id_cuenta INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
     id_plan INT NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
     password VARCHAR(255) NOT NULL,
+    es_admin BOOLEAN DEFAULT FALSE,
     fecha_registro DATETIME DEFAULT CURRENT_TIMESTAMP,
     estado_cuenta ENUM('Activa', 'Suspendida', 'Cancelada') DEFAULT 'Activa',
     FOREIGN KEY (id_plan) REFERENCES PlanesSuscripcion(id_plan)
     ON DELETE RESTRICT ON UPDATE CASCADE
 );
-
 
 -- Pagos suscripcion
 CREATE TABLE PagosSuscripcion (
@@ -49,7 +55,6 @@ CREATE TABLE PagosSuscripcion (
     ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-
 -- Perfiles
 CREATE TABLE Perfiles (
     id_perfil INT AUTO_INCREMENT PRIMARY KEY,
@@ -62,7 +67,6 @@ CREATE TABLE Perfiles (
     ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-
 -- Historial de reproduccion
 CREATE TABLE HistorialReproduccion (
     id_historial INT AUTO_INCREMENT PRIMARY KEY,
@@ -73,16 +77,25 @@ CREATE TABLE HistorialReproduccion (
     completado BOOLEAN DEFAULT FALSE,
     FOREIGN KEY (id_perfil) REFERENCES Perfiles(id_perfil)
     ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (id_contenido)REFERENCES Contenidos(id_contenido)
+    FOREIGN KEY (id_contenido) REFERENCES Contenidos(id_contenido)
     ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+-- ==========================================
+-- DATOS INICIALES
+-- ==========================================
 
 -- Planes
-
 INSERT INTO PlanesSuscripcion
     (nombre_plan, precio, pantallas_simultaneas, resolucion_maxima)
 VALUES
     ('Básico', 99.00, 1, 'HD'),
     ('Estándar', 169.00, 2, 'Full HD'),
     ('Premium', 239.00, 4, '4K');
+
+-- ==========================================
+-- PERFIL ADMIN
+-- ==========================================
+
+UPDATE Cuentas SET es_admin = TRUE WHERE email = 'tu_correo@ejemplo.com'; -- Solo para cambiar perfil de admin
+-- Cambiar "TRUE" por "FALSE"
