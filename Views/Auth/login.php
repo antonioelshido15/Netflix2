@@ -99,7 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
           href="<?= BASE_URL ?>CSS/bootstrap.min.css">
 
     <link rel="stylesheet"
-          href="<?= BASE_URL ?>CSS/authStyle.css">
+          href="<?= BASE_URL ?>CSS/styles.css">
 </head>
 
 <body class="auth-page">

@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <title>Crear cuenta</title>
 
     <link rel="stylesheet" href="<?= BASE_URL ?>CSS/bootstrap.min.css">
-    <link rel="stylesheet" href="<?= BASE_URL ?>CSS/authStyle.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>CSS/styles.css">
 </head>
 <body class="auth-page">
 
