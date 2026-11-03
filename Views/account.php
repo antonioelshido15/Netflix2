@@ -213,7 +213,7 @@ try {
                             <div class="tab-pane fade" id="v-pills-admin" role="tabpanel">
                                 <h3 class="main-subtitle fs-5 border-bottom border-info pb-2 mb-4"
                                     style="color: var(--glitch-cyan);">Gestión Administrativa</h3>
-                                <p class="text-muted mb-4">Herramientas exclusivas para el personal de Glitch TV.</p>
+                                <p class="text-white mb">Herramientas exclusivas para el personal de Glitch TV.</p>
 
                                 <div class="row g-4">
                                     <div class="col-md-6">
@@ -223,7 +223,7 @@ try {
                                                 <i class="bi bi-film mb-3 d-block"
                                                     style="font-size: 2.5rem; color: var(--glitch-pink);"></i>
                                                 <h5 class="card-title fw-bold">Catálogo de Contenido</h5>
-                                                <p class="card-text text-muted small mb-4">Añadir, modificar o eliminar
+                                                <p class="card-text text-white small mb-4">Añadir, modificar o eliminar
                                                     películas, series y documentales de la base de datos.</p>
                                                 <a href="#" class="btn-glitch w-100" style="padding: 10px;">Gestionar
                                                     Catálogo</a>
@@ -237,7 +237,7 @@ try {
                                                 <i class="bi bi-people mb-3 d-block"
                                                     style="font-size: 2.5rem; color: var(--glitch-cyan);"></i>
                                                 <h5 class="card-title fw-bold">Gestión de Usuarios</h5>
-                                                <p class="card-text text-muted small mb-4">Visualizar cuentas registradas,
+                                                <p class="card-text text-white small mb-4"  >Visualizar cuentas registradas,
                                                     modificar estados (suspender/activar) y revisar pagos.</p>
                                                 <a href="#" class="btn-glitch w-100" style="padding: 10px;">Ver Usuarios</a>
                                             </div>

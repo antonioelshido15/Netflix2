@@ -42,7 +42,7 @@ $avatarActivo = isset($_SESSION["avatar"]) ? BASE_URL . "Resources/" . $_SESSION
                         
                         <!-- Columna Izquierda: Tu Cuenta -->
                         <div class="col-6 border-end border-secondary">
-                            <h6 class="text-uppercase text-muted fs-7 mb-3 fw-bold" style="font-size: 0.75rem;">Tu cuenta</h6>
+                            <h6 class="text-uppercase text-white fs-7 mb-3 fw-bold" style="font-size: 0.75rem;">Tu cuenta</h6>
                             <ul class="list-unstyled mb-0">
                                 <li class="mb-2"><a class="text-decoration-none text-white small" href="#">Ayuda</a></li>
                                 <li class="mb-2"><a class="text-decoration-none text-white small" href="#">Ver en cualquier lugar</a></li>
@@ -53,7 +53,7 @@ $avatarActivo = isset($_SESSION["avatar"]) ? BASE_URL . "Resources/" . $_SESSION
                         
                        <!-- Columna Derecha: Perfiles -->
                         <div class="col-6 ps-3">
-                            <h6 class="text-uppercase text-muted fs-7 mb-3 fw-bold" style="font-size: 0.75rem;">Perfiles</h6>
+                            <h6 class="text-uppercase text-white fs-7 mb-3 fw-bold" style="font-size: 0.75rem;">Perfiles</h6>
                             <ul class="list-unstyled mb-0">
                                 <?php if (!empty($perfiles)): ?>
                                     <?php foreach ($perfiles as $perfil): ?>
@@ -77,9 +77,9 @@ $avatarActivo = isset($_SESSION["avatar"]) ? BASE_URL . "Resources/" . $_SESSION
                                         </li>
                                     <?php endforeach; ?>
                                 <?php else: ?>
-                                    <li class="mb-2"><span class="text-muted small">No hay perfiles registrados</span></li>
+                                    <li class="mb-2"><span class="text-white small">No hay perfiles registrados</span></li>
                                 <?php endif; ?>
-                                <li class="mt-4"><a class="text-decoration-none text-muted small" href="<?= BASE_URL ?>Views/profiles.php">Administrar perfiles</a></li>
+                                <li class="mt-4"><a class="text-decoration-none text-white small" href="<?= BASE_URL ?>Views/profiles.php">Administrar perfiles</a></li>
                             </ul>
                         </div>
 
