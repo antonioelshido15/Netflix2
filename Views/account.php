@@ -225,7 +225,7 @@ try {
                                                 <h5 class="card-title fw-bold">Catálogo de Contenido</h5>
                                                 <p class="card-text text-white small mb-4">Añadir, modificar o eliminar
                                                     películas, series y documentales de la base de datos.</p>
-                                                <a href="#" class="btn-glitch w-100" style="padding: 10px;">Gestionar
+                                                <a href="admin_catalog.php" class="btn-glitch w-100" style="padding: 10px;">Gestionar
                                                     Catálogo</a>
                                             </div>
                                         </div>
@@ -239,7 +239,7 @@ try {
                                                 <h5 class="card-title fw-bold">Gestión de Usuarios</h5>
                                                 <p class="card-text text-white small mb-4"  >Visualizar cuentas registradas,
                                                     modificar estados (suspender/activar) y revisar pagos.</p>
-                                                <a href="#" class="btn-glitch w-100" style="padding: 10px;">Ver Usuarios</a>
+                                                <a href="admin_user.php" class="btn-glitch w-100" style="padding: 10px;">Ver Usuarios</a>
                                             </div>
                                         </div>
                                     </div>
