@@ -79,9 +79,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Crear cuenta</title>
 
-    <link rel="stylesheet" href="<?= BASE_URL ?>CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>CSS/bootstrap.css">
     <link rel="stylesheet" href="<?= BASE_URL ?>CSS/styles.css">
 </head>
 <body class="auth-page">
@@ -124,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 name="email"
                 maxlength="100"
                 autocomplete="email"
-                value="<?= htmlspecialchars($_POST["email"] ?? "", ENT_QUOTES, "UTF-8") ?>"
+                value="<?= htmlspecialchars($_POST["email"] ?? $_GET["email"] ?? "", ENT_QUOTES, "UTF-8") ?>"
                 required
             >
 

@@ -21,4 +21,22 @@
     color: var(--bg-dark) !important; /* Fuerza el color oscuro para contrastar */
     box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
 }
-        
+
+/*para el boton de eliminar cuenta :D*/
+.btn-delete-account {
+    display: inline-block;
+    padding: 12px 18px;
+    background-color: #191919;
+    color: white;
+    font-weight: 900;
+    border: 3px solid #ff2a5f;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-delete-account:hover {
+    background-color: #ff2a5f;
+    color: white;
+    box-shadow: 0 0 12px rgba(255, 42, 95, 0.5);
+}

@@ -42,7 +42,6 @@
             <!-- Formulario hacia Registro -->
             <form action="Views/Auth/register.php" method="GET" class="glitch-form">
                 <div class="form-group">
-                    <label for="email">EMAIL:</label>
                     <input type="email" id="email" name="email" class="glitch-input" placeholder="Tu correo electrónico..." required>
                 </div>
 
