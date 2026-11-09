@@ -99,9 +99,3 @@ VALUES
 
 UPDATE Cuentas SET es_admin = TRUE WHERE email = 'tu_correo@ejemplo.com'; -- Solo para cambiar perfil de admin
 -- Cambiar "TRUE" por "FALSE"
-
--- ==========================================
--- Modificación para suspender usuarios
--- ==========================================
-
-ALTER TABLE Cuentas ADD COLUMN suspendido TINYINT(1) DEFAULT 0;

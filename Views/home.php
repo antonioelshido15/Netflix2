@@ -23,7 +23,7 @@ if (!isset($_SESSION["id_cuenta"])) {
    
 </head>
 <body>
-
+<a href="<?= BASE_URL ?>Views/Content.php?id=1"></a>
     <!-- ================= NAVBAR (Incluido desde archivo externo) ================= -->
     <?php include_once __DIR__ . "/navbar.php"; ?>
 
@@ -31,17 +31,17 @@ if (!isset($_SESSION["id_cuenta"])) {
     <header class="hero-section mt-5 pt-5">
         <div class="hero-container d-flex justify-content-center align-items-center">
             <div class="hero-item">
-                <a href="#">
+                <a href="Content.php?id=1">
                     <img src="<?= BASE_URL ?>Resources/maxresdefault.jpg" alt="Anterior">
                 </a>
             </div>
             <div class="hero-item center-img">
-                <a href="#">
+                <a href="Content.php?id=2">
                     <img src="<?= BASE_URL ?>Resources/4svfcykr6pve1.jpeg" alt="Principal">
                 </a>
             </div>
             <div class="hero-item">
-                <a href="#">
+                <a href="Content.php?id=3">
                     <img src="<?= BASE_URL ?>Resources/maxresdefault (1).jpg" alt="Siguiente">
                 </a>
             </div>
@@ -72,28 +72,28 @@ if (!isset($_SESSION["id_cuenta"])) {
                 
                 <!-- Tarjeta 1 -->
                 <div class="content-card">
-                    <a href="#">
+                    <a href="Content.php?id=4">
                         <img src="<?= BASE_URL ?>Resources/Poster/Poster1.png" width="300" height="400" class="img-fluid rounded" alt="Poster 1">
                     </a>
                 </div>
                 
                 <!-- Tarjeta 2 -->
                 <div class="content-card">
-                    <a href="#">
+                    <a href="Content.php?id=1">
                         <img src="<?= BASE_URL ?>Resources/Poster/Poster2.png" width="300" height="400" class="img-fluid rounded" alt="Poster 2">
                     </a>
                 </div>
                 
                 <!-- Tarjeta 3 -->
                 <div class="content-card">
-                    <a href="#">
+                    <a href="Content.php?id=2">
                         <img src="<?= BASE_URL ?>Resources/Poster/Poster3.png" width="300" height="400" class="img-fluid rounded" alt="Poster 3">
                     </a>
                 </div>
                 
                 <!-- Tarjeta 4 -->
                 <div class="content-card">
-                    <a href="#">
+                    <a href="Content.php?id=3">
                         <img src="<?= BASE_URL ?>Resources/Poster/Poster4.png" width="300" height="400" class="img-fluid rounded" alt="Poster 4">
                     </a>
                 </div>
