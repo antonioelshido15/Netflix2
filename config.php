@@ -6,5 +6,5 @@ define("DB_PASS", "");
 define("DB_CHARSET", "utf8mb4");
 
 // Usa la URL completa para evitar confusiones en las redirecciones
-define("BASE_URL", "/Netflix2-main/");
+define("BASE_URL", "/Netflix2/");
 ?>
